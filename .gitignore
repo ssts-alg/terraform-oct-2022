@@ -2,3 +2,5 @@
 *terraform*
 **terraform**
 **.terraform**
+terraformkey.pem
+.DS_Store

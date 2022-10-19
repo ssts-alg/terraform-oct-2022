@@ -20,6 +20,7 @@ variable "env" {
 }
 
 variable "project_name" {
+  type    = string
   default = "SSE-PROJECT"
 }
 
@@ -47,4 +48,25 @@ variable "public_subnet_names" {
 }
 variable "private_subnet_names" {
   default = "DEV-PRIVATE-SUBNET"
+}
+
+
+# variable "ami_id" {
+#   default = "ami-08e2d37b6a0129927"
+# }
+
+
+variable "ami_id" {
+  type = map(string)
+  default = {
+    "us-east-1"  = "ami-026b57f3c383c2eec"
+    "us-west-2"  = "ami-08e2d37b6a0129927"
+    "ap-south-1" = "ami-01216e7612243e0ef"
+  }
+}
+
+
+
+variable "instance_type" {
+  default = "t2.micro"
 }
